@@ -28,7 +28,7 @@ public class ProgressDelete {
         if (file.isFile()) {
             if (!file.delete()) {
                 cancel = true;
-                pw.println("error:Невозможно удалить " + file.getName());
+                pw.println("error:РќРµРІРѕР·РјРѕР¶РЅРѕ СѓРґР°Р»РёС‚СЊ " + file.getName());
             } else {
                 deleted++;
                 cancel = !callback.test(deleted);
@@ -43,7 +43,7 @@ public class ProgressDelete {
                 }
                 if (!file.delete()) {
                     cancel = true;
-                    pw.println("error:Невозможно удалить папку " + file.getName());
+                    pw.println("error:РќРµРІРѕР·РјРѕР¶РЅРѕ СѓРґР°Р»РёС‚СЊ РїР°РїРєСѓ " + file.getName());
                 } else {
                     deleted++;
                     cancel = !callback.test(deleted);
